@@ -14,6 +14,9 @@ function App() {
     <Router>
       <Navbar />
       <Routes>
+        {/* ✅ Redirect root ("/") to login */}
+        <Route path="/" element={<Navigate to="/login" replace />} />
+
         <Route path="/login" element={<Login />} />
         <Route
           path="/candidates"
